@@ -1,5 +1,6 @@
 package tests;
 
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import util.Constants;
@@ -7,6 +8,7 @@ import util.Constants;
 public class ResultsPageTest extends BaseTest {
 
     @Test
+    @Description("Should get the first available today flight price or the day over")
     public void getFirstFlightPrice() {
 
         homePage.clickTripTypeDropdown()

@@ -13,9 +13,10 @@ public class FlightResultsPage extends BasePage {
 
     private final By getWarningMessage = By.xpath("//*[@class='AlertUI__AlertMessage-eMSWPX krfPmN']");
     private final By getAvailableFlight = By.xpath("//*[@class ='sc-iPahhU ivsWJx']");
+
+    // This xPath will return the first flight have price in the flights calendar
     private final By getFirstFlight = By.xpath("//*[@class='sc-dLmyTH fZhVgI']");
     private final By noFlight = By.xpath("//*[@class='sc-bRimrq dqrUVO']//*[text() = 'No flight']");
-    private final By searchAgain = By.xpath("//a[normalize-space()='SEARCH']");
 
     public String resultsPageTitle() {
         return driver.getTitle();
@@ -36,28 +37,12 @@ public class FlightResultsPage extends BasePage {
 
         if (warningMessage().equals(Constants.FAIL_MESSAGE_Warning) &&
                 driver.findElement(noFlight).getText().contains("No flight")) {
-            clickSearch()
-                    .clickNewDepartureDate()
-                    .selectNewDepartureDate()
-                    .selectNewDestinationDate()
-                    .clickGoButton()
-                    .checkFlightAvailability();
+            flight = driver.findElement(getFirstFlight).getText();
+            System.out.println("The first available flight price is " + flight.substring(6, 13).trim() + " €");
+
         } else if (warningMessage().equals(Constants.SUCCESS_MESSAGE_Warning)){
             flight = driver.findElement(getAvailableFlight).getText();
             System.out.println("The first available flight price is " + flight.substring(11, 18).trim() + " €");
-        } else {
-            flight = driver.findElement(getFirstFlight).getText();
-            System.out.println("The first available flight price is " + flight.substring(6, 14).trim() + " €");
         }
-    }
-
-    public SearchAgainPage clickSearch() {
-        try {
-            shortWait(driver).until(ExpectedConditions.elementToBeClickable(searchAgain));
-        } catch (TimeoutException e) {
-            e.printStackTrace();
-        }
-        driver.findElement(searchAgain).click();
-        return new SearchAgainPage(driver);
     }
 }

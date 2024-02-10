@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import pages.FlightResultsPage;
 import pages.HomePage;
-import pages.SearchAgainPage;
 
 import java.util.Properties;
 @Listeners
@@ -18,7 +17,6 @@ public class BaseTest {
     BaseClass baseClass;
     HomePage homePage;
     FlightResultsPage flightResultsPage;
-    SearchAgainPage searchAgainPage;
     String departureCity;
     String destinationCity;
 
@@ -32,7 +30,6 @@ public class BaseTest {
         destinationCity = properties.getProperty("destinationCity");
         homePage = new HomePage(driver);
         flightResultsPage = new FlightResultsPage(driver);
-        searchAgainPage = new SearchAgainPage(driver);
     }
 
     @AfterMethod

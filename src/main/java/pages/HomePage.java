@@ -15,7 +15,6 @@ public class HomePage extends BasePage{
     private final By destinationCitySelection = By.cssSelector(".airport-option");
     private final By departureDateForm = By.name("DepartureDate1");
     private final By departureDateSelection = By.cssSelector(".DayPicker-Day.DayPicker-Day--today");
-    private final By destinationDateSelection = By.cssSelector(".DayPicker-Day.DayPicker-Day--today");
     private final By findFlightsButton = By.xpath("//*[text()='Find flights']");
     private final By tripTypeDropdown = By.xpath("//*[@class='select-input input-holder']");
     private final By tripType = By.cssSelector(".select-option");
@@ -78,11 +77,6 @@ public class HomePage extends BasePage{
 
     public HomePage selectDepartureDate() {
         driver.findElement(departureDateSelection).click();
-        return this;
-    }
-
-    public HomePage selectDestinationDate() {
-        driver.findElement(destinationDateSelection).click();
         return this;
     }
 

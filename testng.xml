@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Air Malta First Flight Price">
-    <test verbose="2" preserve-order="true" name="/Users/remonagayby/Projects/AirMaltaFlight">
+    <listeners>
+        <listener class-name="listener.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Air Malta Flight">
         <classes>
             <class name="tests.ResultsPageTest">
                 <methods>

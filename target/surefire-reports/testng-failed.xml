@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Air Malta First Flight Price]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="/Users/remonagayby/Projects/AirMaltaFlight(failed)" verbose="0">
+    <classes>
+      <class name="tests.ResultsPageTest">
+        <methods>
+          <include name="getFirstFlightPrice"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- tests.ResultsPageTest -->
+    </classes>
+  </test> <!-- /Users/remonagayby/Projects/AirMaltaFlight(failed) -->
+</suite> <!-- Failed suite [Air Malta First Flight Price] -->
