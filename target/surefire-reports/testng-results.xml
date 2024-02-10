@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-10T08:56:39 EET" name="Surefire suite" finished-at="2024-02-10T08:59:57 EET" duration-ms="198120">
+    <groups>
+    </groups>
+    <test started-at="2024-02-10T08:56:39 EET" name="Surefire test" finished-at="2024-02-10T08:59:57 EET" duration-ms="198120">
+      <class name="tests.HomePageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:58:56 EET" name="setUp" finished-at="2024-02-10T08:59:03 EET" duration-ms="7109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="homePageTitleValidation()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:03 EET" name="homePageTitleValidation" finished-at="2024-02-10T08:59:03 EET" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageTitleValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:03 EET" name="tearDown" finished-at="2024-02-10T08:59:03 EET" duration-ms="134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:03 EET" name="setUp" finished-at="2024-02-10T08:59:10 EET" duration-ms="6273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="selectFlight()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:10 EET" name="selectFlight" finished-at="2024-02-10T08:59:40 EET" duration-ms="30442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectFlight -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:40 EET" name="tearDown" finished-at="2024-02-10T08:59:40 EET" duration-ms="158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:40 EET" name="setUp" finished-at="2024-02-10T08:59:46 EET" duration-ms="5683" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:46 EET" name="test" finished-at="2024-02-10T08:59:57 EET" duration-ms="10939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@145eaa29]" started-at="2024-02-10T08:59:57 EET" name="tearDown" finished-at="2024-02-10T08:59:57 EET" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.ResultsPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:56:39 EET" name="setUp" finished-at="2024-02-10T08:56:48 EET" duration-ms="8850" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="oneTripFlightPriceValidation()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:56:48 EET" name="oneTripFlightPriceValidation" finished-at="2024-02-10T08:57:51 EET" duration-ms="63356" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- oneTripFlightPriceValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:57:51 EET" name="tearDown" finished-at="2024-02-10T08:57:51 EET" duration-ms="195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:57:51 EET" name="setUp" finished-at="2024-02-10T08:57:57 EET" duration-ms="6039" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="twoTripFlightPriceValidation()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:57:57 EET" name="twoTripFlightPriceValidation" finished-at="2024-02-10T08:58:56 EET" duration-ms="58574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- twoTripFlightPriceValidation -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.ResultsPageTest@551bdc27]" started-at="2024-02-10T08:58:56 EET" name="tearDown" finished-at="2024-02-10T08:58:56 EET" duration-ms="173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.ResultsPageTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

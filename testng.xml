@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Air Malta First Flight Price">
+    <test verbose="2" preserve-order="true" name="/Users/remonagayby/Projects/AirMaltaFlight">
+        <classes>
+            <class name="tests.ResultsPageTest">
+                <methods>
+                    <include name="getFirstFlightPrice"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
