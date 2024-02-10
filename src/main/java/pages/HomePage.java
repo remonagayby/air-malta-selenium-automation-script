@@ -1,8 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.List;
 
@@ -10,7 +12,7 @@ public class HomePage extends BasePage{
 
     private final By departureFrom = By.xpath("//*[@class = 'route-selection-origin']");
     private final By departureSearch = By.name("Origin1");
-    private final By departureCitySelection = By.cssSelector(".airport-option ");
+    private final By departureCitySelection = By.cssSelector(".airport-option");
     private final By destinationFrom = By.className("route-selection-destination");
     private final By destinationCitySelection = By.cssSelector(".airport-option");
     private final By departureDateForm = By.name("DepartureDate1");
@@ -28,7 +30,7 @@ public class HomePage extends BasePage{
         return driver.getTitle();
     }
 
-    public HomePage clickDepartureFrom() {
+    public HomePage clickDepartingFrom() {
         driver.findElement(departureFrom).click();
         return this;
     }
@@ -49,13 +51,8 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    public HomePage clickDestinationFrom() {
+    public HomePage clickFlyingTo() {
         driver.findElement(destinationFrom).click();
-        return this;
-    }
-
-    public HomePage clickDestinationCity() {
-        driver.findElement(destinationCitySelection).click();
         return this;
     }
 
@@ -75,7 +72,12 @@ public class HomePage extends BasePage{
         return this;
     }
 
-    public HomePage selectDepartureDate() {
+    public HomePage selectTodayDate() {
+        try {
+            shortWait(driver).until(ExpectedConditions.visibilityOfElementLocated(departureDateSelection));
+        } catch (TimeoutException e) {
+            e.printStackTrace();
+        }
         driver.findElement(departureDateSelection).click();
         return this;
     }

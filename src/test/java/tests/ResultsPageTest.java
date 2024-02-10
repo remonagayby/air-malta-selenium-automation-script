@@ -13,14 +13,13 @@ public class ResultsPageTest extends BaseTest {
 
         homePage.clickTripTypeDropdown()
                 .selectOneTrip()
-                .clickDepartureFrom()
+                .clickDepartingFrom()
                 .searchDepartureCity(departureCity)
                 .selectDepartureCity(departureCity)
-                .clickDestinationFrom()
-                .clickDestinationCity()
+                .clickFlyingTo()
                 .selectDestinationCity(destinationCity)
                 .clickDepartureDate()
-                .selectDepartureDate()
+                .selectTodayDate()
                 .clickFindFlights()
                 .checkFlightAvailability();
         String pageTitle = flightResultsPage.resultsPageTitle();

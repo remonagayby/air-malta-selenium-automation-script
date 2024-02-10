@@ -32,17 +32,18 @@ public class FlightResultsPage extends BasePage {
         return driver.findElement(getWarningMessage).getText();
     }
 
+    // In case of getting success warning message, the method return today's first flight price,
     public void checkFlightAvailability() {
         String flight = "";
 
         if (warningMessage().equals(Constants.FAIL_MESSAGE_Warning) &&
                 driver.findElement(noFlight).getText().contains("No flight")) {
             flight = driver.findElement(getFirstFlight).getText();
-            System.out.println("The first available flight price is " + flight.substring(6, 13).trim() + " €");
+            System.out.println("The first available flight price is " + flight.substring(6, 13).trim() + " € on " + flight.substring(0, 6));
 
         } else if (warningMessage().equals(Constants.SUCCESS_MESSAGE_Warning)){
             flight = driver.findElement(getAvailableFlight).getText();
-            System.out.println("The first available flight price is " + flight.substring(11, 18).trim() + " €");
+            System.out.println("The first available flight price is " + flight.substring(11, 18).trim() + " € on " + flight.substring(0, 6));
         }
     }
 }

@@ -21,7 +21,7 @@ public class Listener extends BaseClass implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        //ITestListener.super.onTestFailure(result);
+        ITestListener.super.onTestFailure(result);
 
         WebDriver driver = null;
         String methodName = result.getMethod().getMethodName();
