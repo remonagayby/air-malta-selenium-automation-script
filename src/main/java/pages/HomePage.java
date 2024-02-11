@@ -12,7 +12,7 @@ public class HomePage extends BasePage{
 
     private final By departureFrom = By.xpath("//*[@class = 'route-selection-origin']");
     private final By departureSearch = By.name("Origin1");
-    private final By departureCitySelection = By.cssSelector(".airport-option");
+    private final By departureCitySelection = By.cssSelector(".airport-option ");
     private final By destinationFrom = By.className("route-selection-destination");
     private final By destinationCitySelection = By.cssSelector(".airport-option");
     private final By departureDateForm = By.name("DepartureDate1");
@@ -75,10 +75,10 @@ public class HomePage extends BasePage{
     public HomePage selectTodayDate() {
         try {
             shortWait(driver).until(ExpectedConditions.visibilityOfElementLocated(departureDateSelection));
+            driver.findElement(departureDateSelection).click();
         } catch (TimeoutException e) {
             e.printStackTrace();
         }
-        driver.findElement(departureDateSelection).click();
         return this;
     }
 
